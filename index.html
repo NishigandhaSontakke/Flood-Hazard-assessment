@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width">
+		<title></title>
+
+		<!--put your external stylesheet links here-->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+		<link rel="stylesheet" href="lib/leaflet/leaflet.css"></link>
+		<link rel="stylesheet" href="css/leaflet-search.min.css"></link>
+		<!--<link rel="stylesheet" href="css/leaflet-search.mobile.min.css"></link>-->
+		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+		<link rel="stylesheet" href="css/style.css">
+		<!--[if IE<9]>
+			<link rel="stylesheet" href="css/style.ie.css">
+		<![endif]-->
+	</head>
+	<body>
+			<nav class="navbar navbar-dark bg-dark">
+					<a class="navbar-brand" href="#">Flood Hazard analysis for Building data: City of Ashland WI</a>
+					<a  class="helpButton" data-toggle="modal" data-target="#exampleModalCenter">
+							<i class="far fa-question-circle">  Help</i> 
+					</a>
+					<!-- Modal -->
+				<div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+						<div class="modal-dialog modal-dialog-centered" role="document">
+						<div class="modal-content">
+							<div class="modal-header">
+							<h5 class="modal-title" id="exampleModalCenterTitle">Information</h5>
+							<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+								<span aria-hidden="true">&times;</span>
+							</button>
+							</div>
+							<div class="modal-body">
+								<h5>Data Sources</h5>
+								<p>Building footprints: Geodata@UW (http://geodata.wisc.edu/opengeoportal/)</p>
+								<p>Parcels information: Statewide Parcel Map Initiative SCO (https://www.sco.wisc.edu/parcels/data/). </p>
+								<p>Building assessor data: obtained from the city/village assessor or the assessor contracted by the jurisdiction to perform an assessment.</p>	
+								<h5>Cost risk calucation in rainfall event</h5>
+								<p>Cost risk= Probability of event * Value of building affected by the rainfall event</p>
+							</div>
+							<div class="modal-footer">
+							<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+							</div>
+						</div>
+						</div>
+					</div>
+			</nav>	
+		<section>
+				<button class="toggle"><i class="fas fa-chart-area"></i></button>
+				<div class="graph">
+					<div id="container1" ></div>
+				</div>
+			
+			<div class="container-fluid">
+					<div id="mapid"></div>		
+			</div>
+		</section>
+		<!--you can also use this space for internal scripts or stylesheets;
+		place these within <script> or <style> tags-->
+		<script src="lib/jquery-3.3.1.min.js"></script>
+		<script src="lib/leaflet/leaflet.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet-ajax/2.1.0/leaflet.ajax.js"></script>
+		<script type="text/javascript" src="js/leaflet-side-by-side.js"></script>
+		<script src="https://rawgithub.com/ismyrnow/Leaflet.groupedlayercontrol/master/src/leaflet.groupedlayercontrol.js"></script>
+		
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+		
+		<script src="https://code.highcharts.com/highcharts.js"></script>
+		<script src="https://code.highcharts.com/highcharts-more.js"></script>
+		<script src="https://code.highcharts.com/modules/exporting.js"></script>
+		<script src="https://code.highcharts.com/modules/export-data.js"></script>
+		<!--put your external script links here-->
+		<!--<script type="text/javascript" src="js/tutorial.js"></script>-->
+		<script type="text/javascript" src="js/leaflet-search.src.js"></script>
+		
+		<script type="text/javascript" src="js/geojson.js"></script>
+		<script type="text/javascript" src="js/chart.js"></script>
+	</body>
+</html>
+
+
+
