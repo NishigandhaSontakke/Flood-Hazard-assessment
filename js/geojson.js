@@ -7,7 +7,12 @@ function createMap(){
     
 var map = L.map('mapid', {
     center: [20, 0],
+    zoomControl: false
 }).setView([46.583389, -90.879198], 14);
+
+L.control.zoom({
+    position:'bottomleft'
+}).addTo(map);
 
     //add Mapbox base tilelayer
     var baselayer = L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token={accessToken}', {
@@ -155,7 +160,7 @@ var baselayer2 = L.tileLayer(
 
    
 
-L.control.groupedLayers(overlayMaps,groupedOverlays).addTo(map);
+L.control.groupedLayers(overlayMaps,groupedOverlays,{position:'topleft'}).addTo(map);
     $(".leaflet-control-layers").addClass("leaflet-control-layers-expanded");
     //geojsonLayer.addTo(map); 
     //building_touching_BS.addTo(map);

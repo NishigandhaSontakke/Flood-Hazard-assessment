@@ -1,0 +1,305 @@
+{
+   "type": "FeatureCollection",
+   "features": [
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -111.763275,34.395342 ]
+    },
+    "properties": {
+    "State":"Arizona",
+    "Name":"Arizona",
+    "Utility":"Electric Utility",
+    "Energy":"Coal",
+    "1990 Co2":"31017960",
+    "1993 Co2":"35996931",
+    "1995 Co2":"31350741",
+    "2000 Co2":"39809539",
+    "2005 Co2":"39381815",
+    "2012 Co2":"39390171",
+    "2017 Co2":"31259230"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -81.463983,27.756767 ]
+    },
+    "properties": {
+    "State":"Florida",
+    "Name":"Florida",
+    "Utility":"Electric Utility",
+    "Energy":"Coal",
+    "1990 Co2":"55588010",
+    "1993 Co2":"57089336",
+    "1995 Co2":"58582509",
+    "2000 Co2":"64512540",
+    "2005 Co2":"55097004",
+    "2012 Co2":"41905415",
+    "2017 Co2":"36582551"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -89.433729,40.079661 ]
+    },
+    "properties": {
+    "State":"Illinois",
+    "Name":"Illinois",
+    "Utility":"Electric Utility",
+    "Energy":"Coal",
+    "1990 Co2":"55637070",
+    "1993 Co2":"62340015",
+    "1995 Co2":"64271709",
+    "2000 Co2":"31093487",
+    "2005 Co2":"10890866",
+    "2012 Co2":"11407576",
+    "2017 Co2":"4256220"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -98.582187,38.27312 ]
+    },
+    "properties": {
+    "State":"Kansas",
+    "Name":"Kansas",
+    "Utility":"Electric Utility",
+    "Energy":"Coal",
+    "1990 Co2":"25770223",
+    "1993 Co2":"28912458",
+    "1995 Co2":"27555549",
+    "2000 Co2":"34850244",
+    "2005 Co2":"36393526",
+    "2012 Co2":"29675717",
+    "2017 Co2":"20821364"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -118.313624,34.046478 ]
+    },
+    "properties": {
+    "State":"Los Angeles",
+    "Name":"Los Angeles",
+    "Utility":"Electric Utility",
+    "Energy":"Coal",
+    "1990 Co2":"18737548",
+    "1993 Co2":"20677196",
+    "1995 Co2":"20330703",
+    "2000 Co2":"15420340",
+    "2005 Co2":"12524112",
+    "2012 Co2":"12311192",
+    "2017 Co2":"8008653"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -72.032366,42.378877 ]
+    },
+    "properties": {
+    "State":"Massachusetts",
+    "Name":"Massachusetts",
+    "Utility":"Electric Utility",
+    "Energy":"Coal",
+    "1990 Co2":"10233265",
+    "1993 Co2":"8819529",
+    "1995 Co2":"9573502",
+    "2000 Co2":"1083919",
+    "2005 Co2":"964983",
+    "2012 Co2":"0",
+    "2017 Co2":"0"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [-84.556461 , 43.027825]
+    },
+    "properties": {
+    "State":"Michigan",
+    "Name":"Michigan",
+    "Utility":"Electric Utility",
+    "Energy":"Coal",
+    "1990 Co2":"62529519",
+    "1993 Co2":"59272146",
+    "1995 Co2":"63086542",
+    "2000 Co2":"65735313",
+    "2005 Co2":"68330674",
+    "2012 Co2":"53590329",
+    "2017 Co2":"41731807"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -99.587382,41.737023 ]
+    },
+    "properties": {
+    "State":"Nebraska",
+    "Name":"Nebraska",
+    "Utility":"Electric Utility",
+    "Energy":"Coal",
+    "1990 Co2":"13355408",
+    "1993 Co2":"15472168",
+    "1995 Co2":"16780162",
+    "2000 Co2":"19294113",
+    "2005 Co2":"21450544",
+    "2012 Co2":"24648116",
+    "2017 Co2":"20633677"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -74.404162,40.075738 ]
+    },
+    "properties": {
+    "State":"New Jersey",
+    "Name":"New Jersey",
+    "Utility":"Electric Utility",
+    "Energy":"Coal",
+    "1990 Co2":"6854331",
+    "1993 Co2":"5320008",
+    "1995 Co2":"5077375",
+    "2000 Co2":"5545912",
+    "2005 Co2":"1391770",
+    "2012 Co2":"0",
+    "2017 Co2":"0"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [  -73.994048,40.726489 ]
+    },
+    "properties": {
+    "State":"New York",
+    "Name":"New York",
+    "Utility":"Electric Utility",
+    "Energy":"Coal",
+    "1990 Co2":"23955831",
+    "1993 Co2":"20972379",
+    "1995 Co2":"19519903",
+    "2000 Co2":"3938669",
+    "2005 Co2":"1232544",
+    "2012 Co2":"12497",
+    "2017 Co2":"0"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -86.282008,35.773008 ]
+    },
+    "properties": {
+    "State":"Tennessee",
+    "Name":"Tennessee",
+    "Utility":"Electric Utility",
+    "Energy":"Coal",
+    "1990 Co2":"46471163",
+    "1993 Co2":"54429916",
+    "1995 Co2":"53189329",
+    "2000 Co2":"58148593",
+    "2005 Co2":"54138419",
+    "2012 Co2":"33909317",
+    "2017 Co2":"28053460"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -99.512099,31.816038 ]
+    },
+    "properties": {
+    "State":"Texas",
+    "Name":"Texas",
+    "Utility":"Electric Utility",
+    "Energy":"Coal",
+    "1990 Co2":"123679906",
+    "1993 Co2":"131936543",
+    "1995 Co2":"126662909",
+    "2000 Co2":"143221842",
+    "2005 Co2":"63561686",
+    "2012 Co2":"58240435",
+    "2017 Co2":"47944184"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -111.714358,39.422519 ]
+    },
+    "properties": {
+    "State":"Utah",
+    "Name":"Utah",
+    "Utility":"Electric Utility",
+    "Energy":"Coal",
+    "1990 Co2":"29092010",
+    "1993 Co2":"29984102",
+    "1995 Co2":"28634425",
+    "2000 Co2":"31928683",
+    "2005 Co2":"34205846",
+    "2012 Co2":"28339027",
+    "2017 Co2":"24188782"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -78.492772,37.123225 ]
+    },
+    "properties": {
+    "State":"Virginia",
+    "Name":"Virginia",
+    "Utility":"Electric Utility",
+    "Energy":"Coal",
+    "1990 Co2":"19503892",
+    "1993 Co2":"22577681",
+    "1995 Co2":"22675332",
+    "2000 Co2":"32433903",
+    "2005 Co2":"27300528",
+    "2012 Co2":"12240405",
+    "2017 Co2":"9607754"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -89.688464,44.430898 ]
+    },
+    "properties": {
+    "State":"Wisconsin",
+    "Name":"Wisconsin",
+    "Utility":"Electric Utility",
+    "Energy":"Coal",
+    "1990 Co2":"33746786",
+    "1993 Co2":"35314979",
+    "1995 Co2":"38412951",
+    "2000 Co2":"45171726",
+    "2005 Co2":"45907513",
+    "2012 Co2":"33034455",
+    "2017 Co2":"34669869"
+    }
+  }
+]
+}
