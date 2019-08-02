@@ -23,6 +23,14 @@ L.control.zoom({
         accessToken: 'pk.eyJ1IjoibmlzaGlkaWxpcHNvbnRha2tlIiwiYSI6ImNqY3FucHJ4azAzNXgzM3MwbGRvM3M2YWsifQ.Mwh9X4xZhkSBBCTfBlZHEQ'
     }).addTo(map);
 
+    var baselayer3 = L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token={accessToken}', {
+        attribution: 'Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
+        maxZoom: 22, // setting min amd max level of zoom
+        minZoom: 2,
+        id: 'mapbox.satellite',
+        accessToken: 'pk.eyJ1IjoibmlzaGlkaWxpcHNvbnRha2tlIiwiYSI6ImNqY3FucHJ4azAzNXgzM3MwbGRvM3M2YWsifQ.Mwh9X4xZhkSBBCTfBlZHEQ'
+    });
+
 
 var baselayer2 = L.tileLayer(
     'https://api.mapbox.com/styles/v1/nishidilipsontakke/cjxunvhtx9frw1cqevl3mqemo/tiles/256/{z}/{x}/{y}@2x?access_token=pk.eyJ1IjoibmlzaGlkaWxpcHNvbnRha2tlIiwiYSI6ImNqY3FucHJ4azAzNXgzM3MwbGRvM3M2YWsifQ.Mwh9X4xZhkSBBCTfBlZHEQ', {
@@ -32,7 +40,10 @@ var baselayer2 = L.tileLayer(
         accessToken: 'pk.eyJ1IjoibmlzaGlkaWxpcHNvbnRha2tlIiwiYSI6ImNqY3FucHJ4azAzNXgzM3MwbGRvM3M2YWsifQ.Mwh9X4xZhkSBBCTfBlZHEQ',
         attribution: '© <a href="https://apps.mapbox.com/feedback/">Mapbox</a> © <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
     }).addTo(map);
-    L.control.sideBySide(baselayer,baselayer2).addTo(map);
+
+var leftLayer=[baselayer, baselayer3];
+
+    L.control.sideBySide(leftLayer,baselayer2).addTo(map);
 
     var myStyle = {
         "color": "#ff7800",
@@ -115,44 +126,45 @@ var baselayer2 = L.tileLayer(
     }
     /*var bsFill=  new L.GeoJSON.AJAX("data/bs_poly_dissolved_upproj.geojson", {style: style}).addTo(map);*/
     var overlayMaps = {
-        "Buildings": geojsonLayer,
-        "Flood affected Buildings":building_touching_BS
+        "Basemap grey":baselayer,
+        "Satellite basemap":baselayer3
+    
     };
  
     var tenRainfallEvent= new L.LayerGroup();
 
-    var fourinch = new L.GeoJSON.AJAX("data/1in10yr_4ichrain.geojson",{
+    var fourinch = new L.GeoJSON.AJAX("data/1in10yr_4ichrain80per.geojson",{
         style:fourrain}).addTo(tenRainfallEvent);
     var buildingFourInch=new L.GeoJSON.AJAX("data/building_affected_4inch.geojson",{
             onEachFeature: function (feature, layer) {
-                layer.bindPopup('<p><b>Affected Buildings</b></p><p>Value of the building:'+feature.properties.value_of_b+'</p>'+'<p>Parcel ID: '+feature.properties.PARCELID+'</p>'+'<p>Property Type:'+feature.properties.Class+'</p>'+'<p> Year of Built:'+feature.properties.Year_Built+'</p>');
+                layer.bindPopup('<p><b>Affected Buildings</b></p><p>Value of the building:'+feature.properties.value_of_b+'</p>'+'<p>Parcel ID: '+feature.properties.PARCELID+'</p>'+'<p>Property Type:'+feature.properties.Class+'</p>'+'<p> Year of Built:'+feature.properties.Year_Built+'</p>'+'<p>Total Acre:'+feature.properties.Total_Acre+'</p>'+'<p> House Style:'+feature.properties.Style+'</p>'+'<p>Story:'+feature.properties.Story+'</p>');
               }, style:fourinchstyle}).addTo(tenRainfallEvent);
 
     var fiftyRainfallEvent= new L.LayerGroup();
 
-    var sixinch = new L.GeoJSON.AJAX("data/1in50yr_6ichrain.geojson",{
+    var sixinch = new L.GeoJSON.AJAX("data/1in50yr_6ichrain50.geojson",{
         style:sixrain}).addTo(fiftyRainfallEvent);
     var buildingsixInch=new L.GeoJSON.AJAX("data/building_affected_6ich.geojson",{ onEachFeature: function (feature, layer) {
-        layer.bindPopup('<p><b>Affected Buildings</b></p><p>Value of the building:'+feature.properties.value_of_b+'</p>'+'<p>Parcel ID: '+feature.properties.PARCELID+'</p>'+'<p>Property Type:'+feature.properties.Class+'</p>'+'<p> Year of Built:'+feature.properties.Year_Built+'</p>');
+        layer.bindPopup('<p><b>Affected Buildings</b></p><p>Value of the building:'+feature.properties.value_of_b+'</p>'+'<p>Parcel ID: '+feature.properties.PARCELID+'</p>'+'<p>Property Type:'+feature.properties.Class+'</p>'+'<p> Year of Built:'+feature.properties.Year_Built+'</p>'+'<p>Total Acre:'+feature.properties.Total_Acre+'</p>'+'<p> House Style:'+feature.properties.Style+'</p>'+'<p>Story:'+feature.properties.Story+'</p>');
       }, style: sicinchstyle}).addTo(fiftyRainfallEvent);
 
     var HunRainfallEvent= new L.LayerGroup();
 
-    var Seveninch = new L.GeoJSON.AJAX("data/1in100yr_7ichrain.geojson",{style:sevenrain}).addTo(HunRainfallEvent);
+    var Seveninch = new L.GeoJSON.AJAX("data/1in100yr_7ichrain30.geojson",{style:sevenrain}).addTo(HunRainfallEvent);
     var buildingSevenInch=new L.GeoJSON.AJAX("data/building_affected_7ich.geojson",{ onEachFeature: function (feature, layer) {
-        layer.bindPopup('<p><b>Affected Buildings</b></p><p>Value of the building:'+feature.properties.value_of_b+'</p>'+'<p>Parcel ID: '+feature.properties.PARCELID+'</p>'+'<p>Property Type:'+feature.properties.Class+'</p>'+'<p> Year of Built:'+feature.properties.Year_Built+'</p>');
+        layer.bindPopup('<p><b>Affected Buildings</b></p><p>Value of the building:'+feature.properties.value_of_b+'</p>'+'<p>Parcel ID: '+feature.properties.PARCELID+'</p>'+'<p>Property Type:'+feature.properties.Class+'</p>'+'<p> Year of Built:'+feature.properties.Year_Built+'</p>'+'<p>Total Acre:'+feature.properties.Total_Acre+'</p>'+'<p> House Style:'+feature.properties.Style+'</p>'+'<p>Story:'+feature.properties.Story+'</p>');
       },style:sevcinchstyle}).addTo(HunRainfallEvent);
 
     var groupedOverlays= {
-        "One in Ten year Rainfall Event": {
+        "One in Ten year Rainfall Event:4 inch rainfall": {
         "Affected Buildings": buildingFourInch,
         "Rain Fill up ": fourinch
     },
-    "One in Fifty year Rainfall Event": {
+    "One in Fifty year Rainfall Event: 6 inch rainfall": {
         "Affected Buildings": buildingsixInch,
         "Rain Fill up ": sixinch
     },
-    "One in Hundered year Rainfall Event": {
+    "One in Hundered year Rainfall Event: 7 inch rainfall": {
         "Affected Buildings": buildingSevenInch,
         "Rain Fill up ": Seveninch
     }
@@ -174,4 +186,8 @@ L.control.groupedLayers(overlayMaps,groupedOverlays,{position:'topleft'}).addTo(
 $('.carousel').carousel({
     interval: false
 }); 
-$(document).ready(createMap); 
+
+$(document).ready(function(){
+    createMap();
+});
+/*$(document).ready(createMap); */

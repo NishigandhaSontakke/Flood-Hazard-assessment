@@ -11,14 +11,16 @@
 		<link rel="stylesheet" href="css/leaflet-search.min.css"></link>
 		<!--<link rel="stylesheet" href="css/leaflet-search.mobile.min.css"></link>-->
 		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+		<link href="css/grayscale.css" rel="stylesheet">
+		<link href="css/animate.css" rel="stylesheet">
 		<link rel="stylesheet" href="css/style.css">
 		<!--[if IE<9]>
 			<link rel="stylesheet" href="css/style.ie.css">
 		<![endif]-->
 	</head>
 	<body>
-			<nav class="navbar navbar-dark bg-dark">
-					<a class="navbar-brand" href="#">Flood Hazard analysis for Building data: City of Ashland WI</a>
+			<nav class="navbar fixed-top navbar-dark bg-dark">
+					<a class="navbar-brand" href="#"></a>
 					<a  class="helpButton" data-toggle="modal" data-target="#exampleModalCenter">
 							<i class="far fa-question-circle">  Help</i> 
 					</a>
@@ -46,15 +48,150 @@
 						</div>
 						</div>
 					</div>
-			</nav>	
-		<section>
-				<button class="toggle"><i class="fas fa-chart-area"></i></button>
-				<div id="graph" class="graph">
-					<div id="container1" ></div>
+			</nav>
+		<!-- Header -->
+		<header class="masthead">
+			<div class="container d-flex h-100 align-items-center">
+			  <div class="mx-auto text-center">
+				<h1 class="mx-auto my-0 text-uppercase">Flood Ready</h1>
+				<h2 class="text-white-50 mx-auto mt-2 mb-5" style="color: #fff;">Flood Hazard analysis for Building infrastructure <br> City of Ashland WI</h2>
+				<p style="color:#fff;">By Nishigandha Sontakke</p>
+				<i class="fas fa-chevron-down Down" style="font-size: 55px;color: #fff;"></i>
+			  </div>
+			</div>
+		  </header>
+		
+		  <!-- About Section -->
+		  <section id="about" class="about-section text-center">
+			<div class="container">
+			  <div class="row">
+				<div class="col-lg-8 mx-auto">
+				  <h2 class="text-white mb-4">Why?</h2>
+					<p class="text-white-50" style="color:#fff">Planning, preparing, and responding to flood disasters requires an understanding of the unique risks and 
+						vulnerabilities within each community. This is especially true due to recent heavy rainfall events that have produced floods that have 
+						exceeded historical levels. To effectively assess and plan for such hazards, better building data is needed that goes beyond the current 
+						generalized data used in some flood models. Spatially accurate data on building footprints, coupled with 
+						detailed assessor data documenting pertinent building information, parcel-based tax. In combination with flood hazard information, will allow 
+						to better model the risks and vulnerabilities to the buildings in a given community.
+					</p>
 				</div>
+			  </div>
 			
+			</div>
+		  </section>	
+		 <!-- Projects Section -->
+		 <section id="projects" class="projects-section bg-light">
+			<div class="container">
+		
+			  <!-- Featured Project Row -->
+			  <div class="row align-items-center no-gutters mb-4 mb-lg-5">
+				<div class="col-xl-8 col-lg-7">
+				  <img class="img-fluid mb-3 mb-lg-0" src="img/studyarea.JPG" alt="">
+				</div>
+				<div class="col-xl-4 col-lg-5">
+				  <div class="featured-text text-center text-lg-left">
+					<h4>Study Area</h4>
+					<p class="text-black-50 mb-0">Ashland is a city in Ashland county in the U.S. state of Wisconsin. 
+						The city is a port on Lake Superior, near the head of Chequamegon Bay. 
+						The population was 8,216 at the 2010 census, all of which resided in the Ashland County portion of the city.</p>
+				  </div>
+				</div>
+			  </div>
+
+			  <div class="row align-items-center no-gutters mb-4 mb-lg-5">
+					<div class="col-xl-6 col-lg-6">
+							<div class="featured-text text-center text-lg-left">
+							  <h4>POINT PRECIPITATION FREQUENCY (PF) ESTIMATES</h4>
+							  <p class="text-black-50 mb-0">
+									WITH 90% CONFIDENCE INTERVALS
+									NOAA Atlas 14, Volume 8, Version 2</p>
+							</div>
+						  </div>
+				
+					
+				  </div>
+				  <div class="row align-items-center no-gutters mb-4 mb-lg-5">
+						<div class="col-xl-12 col-lg-12">
+								<div id="containerGraph"></div>
+							</div>
+				  </div>
+		
+			</div>
+		  </section>
+		  <section class="about-section text-center" style="padding-top: 5em;">
+				<div class="container">
+				  <div class="row">
+					<div class="col-lg-8 mx-auto">
+					  <h2 class="text-white mb-4">Storm Sewer Capacity Assessment</h2>
+					  <p class="text-white-50" style="color:#fff">
+						As study conducted by City of Ashland, Project No. 6270701 "Trunk storm sewer pipes had approximately 10-yr capacity
+						while trunk storm sewer inlets had approximately 5-yr capacity. However, because high
+						capacity storm sewers were frequently matched with low capacity inlets, and vice-versa, the
+						overall average capacity of the storm sewer system was found to be capable of collecting and
+						conveying peak flows from the 2-yr rainfall event. Note that the reported average values are, in
+						actuality, the median values, so there are many locations in the City where the capacity is
+						substantially less than the averages reported here." 
+						<br>Further according to report 10-yr service, most frequently the minimum design standard for municipal storm sewer systems.Estimated cost to install additional and/or higher capacity storm drainage
+						  infrastructure to provide 2-yr capacity was $3.5M, the cost to provide 5-yr capacity is $4.6M, and
+						  the cost to provide 10-yr capacity is $6.1M.</p>
+					</div>
+				  </div>
+				
+				</div>
+			  </section>
+			  <div class="container projects-section">
+				    <h2 class="text-black mb-4 sideBorder">Recent Event</h2>
+				  <!-- Project One Row -->
+				  <div class="row justify-content-center no-gutters mb-5 mb-lg-0">
+					  
+					<div class="col-lg-6">
+					  <img class="img-fluid" src="img/demo-image-01.png" alt="">
+					</div>
+					<div class="col-lg-6">
+					  <div class="bg-black text-center h-100 project">
+						<div class="d-flex h-100">
+						  <div class="project-text w-100 my-auto text-center text-lg-left">
+							<h4 class="text-white">June 2018</h4>
+							<p class="mb-0 text-white-50" style="color: #fff;">Roads, bridges  and culverts were flooded and some washed out as four days of stormy weather and heavy rains in mid-June (14th-17th) caused record flooding across northwestern Wisconsin and adjacent areas of east central Minnesota. The hardest hit areas were the Wisconsin counties of Douglas, Bayfield, Ashland, Iron and Burnett where Gov. Scott Walker declared a state of emergency. .</p>
+							<hr class="d-none d-lg-block mb-0 ml-0">
+						  </div>
+						</div>
+					  </div>
+					</div>
+				  </div>
+			
+				  <!-- Project Two Row -->
+				  <div class="row justify-content-center no-gutters">
+					<div class="col-lg-6">
+					  <img class="img-fluid" src="img/demo-image-02.jpg" alt="">
+					</div>
+					<div class="col-lg-6 order-lg-first">
+					  <div class="bg-black text-center h-100 project">
+						<div class="d-flex h-100">
+						  <div class="project-text w-100 my-auto text-center text-lg-right">
+							<h4 class="text-white"></h4>
+							<p class="mb-0 text-white-50"  style="color: #fff;">Northern Great Lakes Visitor Center/U. S. Highway 2 Airfox Photography</p>
+							<hr class="d-none d-lg-block mb-0 mr-0">
+						  </div>
+						</div>
+					  </div>
+					</div>
+				  </div>
+			  </div>
+		<section>
+				<div class="container">
+						<h2 class="text-black mb-4 sideBorder">The Map</h2>
+						<p class="mb-0 text-white-50">The following map shows the affected buildings by the different possible rainfall events that may cause flood like situtaion in the city. </p> <br><br>
+				</div>
+				
 			<div class="container-fluid">
-					<div id="mapid"></div>		
+			
+					<div id="mapid">
+						<button class="toggle"><i class="fas fa-chart-area" style="font-size:20px"></i></button>
+						<div id="graph" class="graph">
+							<div id="container1" ></div>
+						</div>
+					</div>		
 			</div>
 		</section>
 		<!--you can also use this space for internal scripts or stylesheets;
@@ -70,6 +207,7 @@
 		
 		<script src="https://code.highcharts.com/highcharts.js"></script>
 		<script src="https://code.highcharts.com/highcharts-more.js"></script>
+		<script src="https://code.highcharts.com/modules/series-label.js"></script>
 		<script src="https://code.highcharts.com/modules/exporting.js"></script>
 		<script src="https://code.highcharts.com/modules/export-data.js"></script>
 		<!--put your external script links here-->
@@ -78,6 +216,13 @@
 		
 		<script type="text/javascript" src="js/geojson.js"></script>
 		<script type="text/javascript" src="js/chart.js"></script>
+		<script>
+			$(".Down").click(function() {
+				$('html,body').animate({
+						scrollTop: $("#about").offset().top},
+						'slow');
+		});
+		</script>
 	</body>
 </html>
 
