@@ -137,7 +137,7 @@ var leftLayer=[baselayer, baselayer3];
         style:fourrain}).addTo(tenRainfallEvent);
     var buildingFourInch=new L.GeoJSON.AJAX("data/building_affected_4inch.geojson",{
             onEachFeature: function (feature, layer) {
-                layer.bindPopup('<p><b>Affected Buildings</b></p><p>Value of the building:'+feature.properties.value_of_b+'</p>'+'<p>Parcel ID: '+feature.properties.PARCELID+'</p>'+'<p>Property Type:'+feature.properties.Class+'</p>'+'<p> Year of Built:'+feature.properties.Year_Built+'</p>'+'<p>Total Acre:'+feature.properties.Total_Acre+'</p>'+'<p> House Style:'+feature.properties.Style+'</p>'+'<p>Story:'+feature.properties.Story+'</p>');
+                layer.bindPopup('<p><b>Affected Buildings</b></p><p>Value of the building: $'+feature.properties.value_of_b+'</p>'+'<p>Parcel ID: '+feature.properties.PARCELID+'</p>'+'<p>Property Type:'+feature.properties.Class+'</p>'+'<p> Year of Built:'+feature.properties.Year_Built+'</p>'+'<p>Total Acre:'+feature.properties.Total_Acre+'</p>'+'<p> House Style:'+feature.properties.Style+'</p>'+'<p>Story:'+feature.properties.Story+'</p>');
               }, style:fourinchstyle}).addTo(tenRainfallEvent);
 
     var fiftyRainfallEvent= new L.LayerGroup();
@@ -155,7 +155,14 @@ var leftLayer=[baselayer, baselayer3];
         layer.bindPopup('<p><b>Affected Buildings</b></p><p>Value of the building:'+feature.properties.value_of_b+'</p>'+'<p>Parcel ID: '+feature.properties.PARCELID+'</p>'+'<p>Property Type:'+feature.properties.Class+'</p>'+'<p> Year of Built:'+feature.properties.Year_Built+'</p>'+'<p>Total Acre:'+feature.properties.Total_Acre+'</p>'+'<p> House Style:'+feature.properties.Style+'</p>'+'<p>Story:'+feature.properties.Story+'</p>');
       },style:sevcinchstyle}).addTo(HunRainfallEvent);
 
+
+    var bound= new L.LayerGroup();
+     var cityBound=new L.GeoJSON.AJAX("data/cityofashlandboundary.geojson").addTo(bound);
+
     var groupedOverlays= {
+        "City Boundary":{
+            "Study Area": cityBound
+        },
         "One in Ten year Rainfall Event:4 inch rainfall": {
         "Affected Buildings": buildingFourInch,
         "Rain Fill up ": fourinch
