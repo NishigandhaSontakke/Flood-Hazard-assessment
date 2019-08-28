@@ -135,7 +135,7 @@ Highcharts.chart('container1', {
 
     series: [{
         data: [
-            { x: 2, y: 1,z:0},
+            
             { x: 4, y: 0.1, z: 8634422.02, name: '1/10yr', country: '1 in 10 year event' },
             { x: 6, y: 0.02, z: 1958800.409, name: '1/50yr', country: '1 in 50 year event' },
             { x: 7, y: 0.01, z: 995278.9484, name: '1/100yr', country: '1 in 100 year event' }
